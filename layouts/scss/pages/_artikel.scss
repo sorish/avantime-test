@@ -1,0 +1,354 @@
+/* top content styles */
+.top-content {
+  padding: 43px 30px 9px;
+  font: 21px/33px $georgia;
+  color: #474747;
+
+  @include media ('<widescreen') {
+    padding: 40px 0 10px;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  @include media ('<tablet') {
+    padding: 0 5px 10px;
+  }
+
+  &.top1 {
+    @include media ('<tablet') {
+      padding-top: 40px;
+    }
+  }
+
+  .title {
+    font: bold 50px/52px $gill-bold;
+    display: block;
+    margin: 0 0 8px;
+    letter-spacing: -.3px;
+
+    @include media ('<desktop') {
+      font-size: 40px;
+      line-height: 42px;
+    }
+
+    @include media ('<tablet') {
+      font-size: 27px;
+      line-height: 31px;
+      margin-bottom: 11px;
+    }
+
+    a {
+      @include link-color(#474747,20%);
+    }
+  }
+
+  h3 {
+    margin-bottom: 13px;
+  }
+
+  p {
+    margin: 0 0 32px;
+
+    @include media ('<desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  .top-post {
+    font: 34px/42px $gill;
+    color: #8f8f8f;
+    overflow: hidden;
+
+    @include media ('<desktop') {
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    @include media ('<tablet') {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @include media ('<tablet') {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      overflow: visible;
+    }
+
+    .frame {
+      overflow: hidden;
+
+      @include media ('<tablet') {
+        display: table-footer-group;
+        height: 1%;
+      }
+    }
+
+    .meta {
+      overflow: hidden;
+      margin: 0 0 17px;
+
+      @include media ('<desktop') {
+        margin-bottom: 10px;
+      }
+
+      @include media ('<tablet') {
+        margin-bottom: 14px;
+      }
+
+      time {
+        font: 600 20px/1.4 $gill;
+
+        @include media ('<desktop') {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  figure {
+    padding: 8px 0 43px;
+
+    @include media ('<tablet') {
+      margin: 0 -20px;
+      padding: 0 0 20px;
+    }
+
+    img {
+      @include media ('<tablet') {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.how-it-works {
+
+  @include media ('<tablet') {
+    padding-top: 6px;
+  }
+}
+
+.stages {
+  padding: 29px 0 30px;
+  overflow: hidden;
+
+  @include media ('<desktop') {
+    padding: 20px 0;
+  }
+
+  @include media ('<tablet') {
+    padding: 0;
+  }
+
+  h3 {
+    @include media ('<tablet') {
+      line-height: 30px;
+      font-size: 22px;
+    }
+  }
+}
+
+/* numbering styles */
+
+.numbering {
+  @extend %listreset;
+  counter-reset: item;
+  font-family: $gill;
+  overflow: hidden;
+  padding: 22px 0;
+
+  @include media ('<desktop') {
+    padding: 10px 0;
+  }
+
+  @include media ('<tablet') {
+    padding: 28px 0 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 60px;
+    margin: 0 0 11px;
+
+    @include media ('<tablet') {
+      font-size: 16px;
+      line-height: 27px;
+      padding-left: 40px;
+      margin-bottom: 40px;
+    }
+
+    &:before {
+      content: counters(item, ".") ".";
+      counter-increment: item ;
+      position: absolute;
+      left: 18px;
+      width: 35px;
+
+      @include media ('<tablet') {
+        width: 20px;
+        left: 10px;
+      }
+    }
+  }
+}
+/* intro section styles */
+.intro-section {
+  color: #2a2a2a;
+  font: 30px/34px $georgia;
+  position: relative;
+  background: #e5f5fc;
+
+  @include media ('<widescreen') {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  @include media ('<desktop') {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .title {
+    margin: 0 0 24px;
+    font: bold 54px/1.1 $gill-bold;
+    display: block;
+    color: #196892;
+
+    @include media ('<widescreen') {
+      font-size: 45px;
+      margin-bottom: 18px;
+    }
+
+    @include media ('<desktop') {
+      font-size: 34px;
+      line-height: 39px;
+    }
+  }
+
+  .text-holder {
+    padding: 93px 500px 90px 0;
+
+    @include media ('<widescreen') {
+      padding: 80px 410px 80px 0;
+    }
+
+    @include media ('<desktop') {
+      padding: 70px 300px 70px 0;
+    }
+
+    @include media ('<tablet') {
+      padding: 58px 0 38px;
+    }
+
+    br {
+      @include media ('<tablet') {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin: 0 0 39px;
+
+    @include media ('<desktop') {
+      margin-bottom: 25px;
+    }
+  }
+
+  .btn-holder {
+    position: relative;
+    padding-left: 4px;
+
+    @include media ('<tablet') {
+      margin: 0 auto;
+      padding-top: 17px;
+    }
+
+    ul {
+      @extend %listreset;
+      @extend %displayreset;
+      margin: 0 -10px;
+
+      li {
+        @include displayinline(14px,20px,middle,$gill,1px);
+        padding: 0 10px 10px;
+
+        @include media ('<tablet') {
+          display: block;
+          padding: 0 10px 19px;
+        }
+
+        &.text {
+          font-weight: bold;
+          text-transform: uppercase;
+
+          @include media ('<tablet') {
+            padding-top: 16px;
+          }
+
+          a {
+
+            &.red-link {
+              color: #c9252c;
+
+              &:hover {
+                color: darken(#c9252c,10%);
+              }
+            }
+
+            &:hover {
+              opacity: .7;
+            }
+          }
+        }
+
+        .btn {
+          min-width: 217px;
+
+          @include media ('<desktop') {
+            min-width: 150px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          @include media ('<tablet') {
+            min-width: 202px;
+          }
+        }
+
+        a {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 700;
+
+          @include media ('<desktop') {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .image-holder {
+    position: absolute;
+    bottom: 0;
+    right: -11px;
+    width: 491px;
+
+    @include media ('<widescreen') {
+      width: 420px;
+      right: -25px;
+    }
+
+    @include media ('<desktop') {
+      width: 350px;
+    }
+  }
+}

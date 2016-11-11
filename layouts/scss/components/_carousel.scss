@@ -1,0 +1,72 @@
+.carousel {
+  padding-top: 7px;
+  margin: 0 0 41px 4px;
+  max-width: 700px;
+
+  @include media ('<desktop') {
+    max-width: none;
+    padding-top: 0;
+  }
+
+  @include media ('<tablet') {
+    margin: 0 -20px 24px;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+
+  .carousel-control {
+    top: 50%;
+    transform:translateY(-50%);
+    width: 18px;
+    height: 56px;
+    opacity: 1;
+
+    @include media ('<tablet') {
+      width: 9px;
+      height: 27px;
+      margin-top: -10px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.left {
+      left: 20px;
+      background: none !important;
+    }
+
+    &.right {
+      right: 20px;
+      background: none !important;
+    }
+
+    img {
+      width: auto;
+    }
+  }
+
+  .carousel-caption {
+    position: static;
+    text-align: center;
+    font: 18px/20px $gill;
+    color: #8f8f8f;
+    text-shadow:none;
+    box-shadow: none;
+    padding: 0;
+
+    @include media ('<tablet') {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    strong {
+      font-family: $gill-semi;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+}

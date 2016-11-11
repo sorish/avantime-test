@@ -1,0 +1,78 @@
+.breadcrumb-holder {
+  position: relative;
+  overflow: hidden;
+  @include media ('<tablet') {
+    display: none;
+  }
+
+  &:after {
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: #43434b;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+  }
+}
+
+.breadcrumb {
+  background: transparent;
+  @extend %listreset;
+  padding: 27px 0 10px;
+  margin: 0 -20px 0 0;
+  @extend %displayreset;
+
+  li {
+    @include displayinline(14px,20px,top,$gill);
+    position: relative;
+    padding: 1px 20px 16px 28px;
+
+    @include media ('<tablet') {
+      padding: 0 15px 12px 25px;
+    }
+
+    &.start {
+      font: 600 20px/25px $gill-semi;
+      padding-right: 12px;
+      padding-left: 0;
+      padding-top: 0;
+
+      a {
+        color: $brand-primary;
+      }
+    }
+
+    & + li {
+      &:before {
+        position: absolute;
+        left: 0;
+        top: -4px;
+        font-size: 28px;
+        content: "\e900";
+        @extend .icomoon;
+
+        @include media ('<tablet') {
+          font-size: 25px;
+          top: -3px;
+        }
+      }
+    }
+
+    &.active {
+      a {
+        pointer-events:none;
+        color: lighten(#76767b,30%);
+      }
+    }
+
+    a {
+      color: #76767b;
+
+      &:hover {
+        color: lighten(#76767b,30%);
+      }
+    }
+  }
+}

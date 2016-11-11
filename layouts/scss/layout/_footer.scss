@@ -1,0 +1,224 @@
+/* footer styles */
+#footer {
+  background: #28282e;
+  color: #fff;
+
+  .footer-main {
+    padding: 46px 0 0;
+  }
+
+  h3 {
+    font: bold 20px/25px $gill-bold;
+    margin:0 0 19px;
+
+    @include media ('<desktop') {
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+
+    @include media ('<tablet') {
+      margin-bottom: 13px;
+    }
+  }
+
+  .row {
+    @extend %displayreset;
+
+    .col {
+      float: none;
+      @include displayinline(14px,21px,top,$gill);
+      margin-bottom: 43px;
+
+      @include media ('<tablet') {
+        display: block;
+        margin-bottom: 46px;
+      }
+
+      &.extra-block {
+        @include media ('<tablet') {
+          margin-bottom: 38px;
+        }
+
+        p {
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+
+  .links {
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #43434b;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -.5px;
+
+      @include media ('<tablet') {
+        letter-spacing: 0;
+        padding: 9px 0;
+      }
+
+      a {
+        color: #76767b;
+
+        &:hover {
+          color: lighten(#76767b,30%);
+        }
+      }
+    }
+  }
+
+  .logo-hold {
+    padding-top: 5px;
+    margin-bottom: 26px;
+
+    @include media ('<tablet') {
+      padding-top: 2px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+
+  .extra-block {
+    font-family: $georgia !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+
+    @include media ('<desktop') {
+      font-size: 16px !important;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #fff;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  .title {
+    display: block;
+    font-family: $gill-bold !important;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 33px;
+    margin: 0 0 10px;
+
+    @include media ('<desktop') {
+      font-size: 21px;
+      line-height: 23px;
+    }
+
+    @include media ('<tablet') {
+      margin-bottom: 14px;
+    }
+  }
+
+  .contact-points {
+    color: #76767b;
+
+    >li {
+      padding: 10px 0;
+      font-size: 14px;
+      line-height: 21px;
+      border-bottom: 1px solid #43434b;
+      letter-spacing: -.2px;
+
+      @include media ('<tablet') {
+        line-height: 19px;
+      }
+
+      a {
+        color: #76767b;
+
+        &:hover {
+          color: lighten(#76767b,30%);
+        }
+      }
+    }
+
+    address {
+      font-style: normal;
+      margin-bottom: 0;
+
+      @include media ('<tablet') {
+        line-height: 19px;
+      }
+    }
+
+    strong {
+      display: block;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts {
+    @extend %listreset;
+    padding-top: 4px;
+
+    @include media ('<tablet') {
+      padding-top: 0;
+    }
+
+    li {
+      vertical-align: top;
+      padding: 0;
+      display: inline;
+      letter-spacing: -.3px;
+
+      @include media ('<tablet') {
+        display: block;
+        margin-left: 0;
+      }
+
+      & + li {
+        &:before {
+          content: ",";
+          display: inline-block;
+          vertical-align: middle;
+
+          @include media ('<tablet') {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .tel-link {
+    color: #76767b;
+
+    @include media ('>=1025px') {
+      pointer-events:none;
+
+    }
+
+    &:hover {
+      @include media ('<1025px') {
+        color: lighten(#76767b,30%);
+      }
+    }
+  }
+}
+
+.tel-link {
+  color: #474747;
+
+  @include media ('>=1025px') {
+    pointer-events:none;
+  }
+
+  &:hover {
+    @include media ('<1025px') {
+      color: lighten(#474747,30%);
+    }
+  }
+}
